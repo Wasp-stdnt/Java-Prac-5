@@ -14,7 +14,10 @@ class WordDetectionFSMTest {
             "'TEST', FINISH",
             "'at end of string TEST', FINISH",
             "'TEST at start of string', FINISH",
-            "'TESTTEST', FINISH"
+            "'TESTTEST', FINISH",
+            "'TTEST', FINISH",
+            "'TETEST', FINISH",
+            "'TESTEST', FINISH"
     })
     void examineString(String input, State expectedState) {
         State result = WordDetectionFSM.examineString(input);

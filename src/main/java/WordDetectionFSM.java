@@ -16,10 +16,12 @@ public abstract class WordDetectionFSM {
             }
             case State.FIRST_LETTER -> {
                 if (event == 'E') state = State.SECOND_LETTER;
+                else if (event == 'T') state = State.FIRST_LETTER;
                 else state = State.START;
             }
             case State.SECOND_LETTER -> {
                 if (event == 'S') state = State.THIRD_LETTER;
+                else if (event == 'T') state = State.FIRST_LETTER;
                 else state = State.START;
             }
             case State.THIRD_LETTER -> {
